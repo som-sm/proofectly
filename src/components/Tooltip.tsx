@@ -7,6 +7,14 @@ import { ScrollArea } from "~components/ui/scroll-area"
 import { Skeleton } from "~components/ui/skeleton"
 import { type AppState, type ModelStatus } from "~lib/state"
 
+function getSelectionRange() {
+  const selection = window.getSelection()
+  if (selection && selection.rangeCount > 0) {
+    return selection.getRangeAt(0)
+  }
+  return null
+}
+
 export default function Tooltip({
   activeOperationId,
   operationState,
@@ -28,6 +36,8 @@ export default function Tooltip({
     activeElement instanceof HTMLElement && activeElement.isContentEditable
   const showReplace = isInputOrTextarea || isContentEditable
 
+  const selectionRange = useState(getSelectionRange)[0]
+
   const ref = useCallback((node: HTMLDivElement | null) => {
     if (node) {
       setContainer(node)
@@ -45,14 +55,11 @@ export default function Tooltip({
         activeElement.setRangeText(text)
       }
     } else if (isContentEditable) {
-      const selection = window.getSelection()
-      if (selection?.rangeCount && !selection.isCollapsed) {
-        const range = selection.getRangeAt(0)
-
-        range.deleteContents()
+      if (selectionRange) {
+        selectionRange.deleteContents()
 
         const node = document.createTextNode(text)
-        range.insertNode(node)
+        selectionRange.insertNode(node)
       }
     }
 
