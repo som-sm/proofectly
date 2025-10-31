@@ -1,6 +1,12 @@
-# Proofectly
+<div align="center">
+  <br>
+  <br>
+  <img src="media/logo.svg" width="300">
+  <br>
+  <br>
+</div>
 
-A Chrome extension that helps you perfect your words, directly from your right-click menu.
+> A Chrome extension that helps you perfect your words, directly from your right-click menu.
 
 # Testing instructions
 
