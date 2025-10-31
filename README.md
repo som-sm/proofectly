@@ -4,7 +4,7 @@ A Chrome extension that helps you perfect your words, directly from your right-c
 
 # Testing instructions
 
-1. Ensure the browser has the required Chrome flags enabled for the "Proofreader API" and "Rewriter API".
+1. Ensure the browser has the required Chrome flags enabled for the [Proofreader API](chrome://flags/#proofreader-api-for-gemini-nano) and [Rewriter API](chrome://flags/#rewriter-api-for-gemini-nano).
 2. Clone the repository.
 3. Install the dependencies using `npm install`.
 4. Build the project with `npm run build`.
