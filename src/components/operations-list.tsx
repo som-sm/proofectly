@@ -109,7 +109,7 @@ export default function OperationsList() {
         type="single"
         collapsible
         className="w-full"
-        defaultValue={`item-${operations[1]!.id}`}
+        defaultValue={`item-${operations[0]?.id}`}
       >
         {operations.map((operation) => (
           <AccordionItem value={`item-${operation.id}`} key={operation.id}>

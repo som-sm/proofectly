@@ -84,6 +84,74 @@ export type WritingOption = {
 
 export const DEFAULT_WRITING_OPTIONS: WritingOption[] = [
   {
+    id: "rewrite",
+    name: "Rewrite",
+    iconName: "PenLine",
+    title: `Rewrite "%s"`,
+    contexts: ["selection", "editable"],
+    enabled: true,
+    configs: [
+      {
+        id: "tone",
+        name: "Tone",
+        type: "radio",
+        selectedOptionId: "as-is",
+        options: [
+          {
+            id: "more-formal",
+            name: "More Formal",
+            description:
+              "Writing should use polished and professional language, maintaining a serious and respectful tone.",
+            iconName: "BriefcaseBusiness"
+          },
+          {
+            id: "as-is",
+            name: "As-is",
+            description:
+              "Writing should keep the natural tone of the input without changing the formality level.",
+            iconName: "Cable"
+          },
+          {
+            id: "more-casual",
+            name: "More Casual",
+            description:
+              "Writing should use a friendly and relaxed tone, with simpler and more conversational language.",
+            iconName: "Handshake"
+          }
+        ]
+      },
+      {
+        id: "length",
+        name: "Length",
+        type: "radio",
+        selectedOptionId: "as-is",
+        options: [
+          {
+            id: "shorter",
+            name: "Shorter",
+            description:
+              "Output should be more concise, removing extra details while keeping the main ideas clear.",
+            iconName: "Shredder"
+          },
+          {
+            id: "as-is",
+            name: "As-is",
+            description:
+              "Output should match the original length and level of detail of the input.",
+            iconName: "File"
+          },
+          {
+            id: "longer",
+            name: "Longer",
+            description:
+              "Output should be more detailed and cover the content in greater depth.",
+            iconName: "Files"
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: "proofread",
     name: "Proofread",
     iconName: "CheckCircle",
@@ -168,74 +236,6 @@ export const DEFAULT_WRITING_OPTIONS: WritingOption[] = [
             long: "Summary should be within 22 words."
           }
         }
-      }
-    ]
-  },
-  {
-    id: "rewrite",
-    name: "Rewrite",
-    iconName: "PenLine",
-    title: `Rewrite "%s"`,
-    contexts: ["selection", "editable"],
-    enabled: true,
-    configs: [
-      {
-        id: "tone",
-        name: "Tone",
-        type: "radio",
-        selectedOptionId: "as-is",
-        options: [
-          {
-            id: "more-formal",
-            name: "More Formal",
-            description:
-              "Writing should use polished and professional language, maintaining a serious and respectful tone.",
-            iconName: "BriefcaseBusiness"
-          },
-          {
-            id: "as-is",
-            name: "As-is",
-            description:
-              "Writing should keep the natural tone of the input without changing the formality level.",
-            iconName: "Cable"
-          },
-          {
-            id: "more-casual",
-            name: "More Casual",
-            description:
-              "Writing should use a friendly and relaxed tone, with simpler and more conversational language.",
-            iconName: "Handshake"
-          }
-        ]
-      },
-      {
-        id: "length",
-        name: "Length",
-        type: "radio",
-        selectedOptionId: "as-is",
-        options: [
-          {
-            id: "shorter",
-            name: "Shorter",
-            description:
-              "Output should be more concise, removing extra details while keeping the main ideas clear.",
-            iconName: "Shredder"
-          },
-          {
-            id: "as-is",
-            name: "As-is",
-            description:
-              "Output should match the original length and level of detail of the input.",
-            iconName: "File"
-          },
-          {
-            id: "longer",
-            name: "Longer",
-            description:
-              "Output should be more detailed and cover the content in greater depth.",
-            iconName: "Files"
-          }
-        ]
       }
     ]
   }
