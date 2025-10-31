@@ -1,0 +1,15 @@
+{
+  "extends": "plasmo/templates/tsconfig.base",
+  "exclude": ["node_modules"],
+  "include": [".plasmo/index.d.ts", "./**/*.ts", "./**/*.tsx", "./**/*.d.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "~*": ["./src/*"]
+    },
+    "baseUrl": "."
+  }
+}
