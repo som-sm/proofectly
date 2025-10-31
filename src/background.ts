@@ -22,7 +22,11 @@ chrome.runtime.onInstalled.addListener(async function () {
   fetchInitialToolsStatus()
 })
 
-async function fetchInitialToolsStatus() {
+chrome.runtime.onStartup.addListener(async function () {
+  fetchInitialToolsStatus()
+})
+
+function fetchInitialToolsStatus() {
   setInitialSummarizerAvailability()
   setInitialProofreaderAvailability()
   setInitialRewriterAvailability()
