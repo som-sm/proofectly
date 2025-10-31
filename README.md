@@ -1,33 +1,29 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Proofectly
 
-## Getting Started
+A Chrome extension that helps you perfect your words, directly from your right-click menu.
 
-First, run the development server:
+# Testing instructions
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+1. Ensure the browser has the required Chrome flags enabled for the "Proofreader API" and "Rewriter API".
+2. Clone the repository.
+3. Install the dependencies using `npm install`.
+4. Build the project with `npm run build`.
+5. Load the `proofectly/build/chrome-mv3-prod` directory into `chrome://extensions`.
+6. Check the status of different tools from the extension popup, or select any text, right-click, and choose "Proofectly" and then select "Rewrite", "Proofread", or "Summarize".
+7. You can also customize the tools or toggle their visibility from the extension popup.
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+# Inspiration
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+While writing online, whether drafting an email, texting a colleague, or publishing a blog post, we often wish for a quick second opinion. But usually, that means copying text somewhere else, waiting for results, and then pasting it all back. It is too much effort for a quick check.
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+Proofectly removes all that friction by letting you improve your writing right where you are, without ever leaving your current tab.
 
-## Making production build
+# What it does
 
-Run the following:
+Proofectly lives in your browser’s context menu. You can simply select any text, right-click, and choose from Proofread, Rewrite, or Summarize.
 
-```bash
-pnpm build
-# or
-npm run build
-```
+In seconds, Proofectly shows you an AI-enhanced version of your text. With one click, you can replace the original text instantly.
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+No tab switching, no copy-paste chaos. It all happens seamlessly, in place.
 
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+What makes Proofectly special is that it uses Chrome’s built-in AI APIs, which run entirely on your device. Your text never leaves your computer, making it private, secure, and ideal for sensitive writing such as business emails, legal drafts, or personal notes. And it also means there are no subscription charges, no usage caps, just pure AI assistance, right at your fingertips.
