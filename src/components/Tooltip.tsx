@@ -75,7 +75,7 @@ export default function Tooltip({
             ></div>
           </PopoverAnchor>
           <PopoverContent
-            className="w-120 p-0"
+            className="w-120 p-0 shadow-[0px_-30px_80px_-5px_rgba(255,0,0,0.1),-30px_0px_80px_-5px_rgba(252,83,244,0.1),30px_0px_80px_-5px_rgba(135,1,150,0.1),0px_30px_80px_-5px_rgba(55,0,255,0.1)]"
             container={container}
             sideOffset={12}
             collisionPadding={12}
