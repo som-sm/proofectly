@@ -6,7 +6,11 @@
   <br>
 </div>
 
-> A Chrome extension that helps you perfect your words, directly from your right-click menu.
+<p align="center">
+A Chrome extension that helps you perfect your words, directly from your right-click menu.
+</p>
+
+<br>
 
 # Testing instructions
 
