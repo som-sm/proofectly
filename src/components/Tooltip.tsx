@@ -58,8 +58,16 @@ export default function Tooltip({
       if (selectionRange) {
         selectionRange.deleteContents()
 
-        const node = document.createTextNode(text)
-        selectionRange.insertNode(node)
+        const lines = text.split(/\r?\n/)
+        const frag = document.createDocumentFragment()
+
+        lines.forEach((line, i) => {
+          frag.appendChild(document.createTextNode(line))
+          if (i < lines.length - 1)
+            frag.appendChild(document.createElement("br"))
+        })
+
+        selectionRange.insertNode(frag)
       }
     }
 
