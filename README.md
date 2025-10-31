@@ -20,6 +20,8 @@ Proofectly removes all that friction by letting you improve your writing right w
 
 # What it does
 
+<img src="media/screenshot-main.png" alt="screenshot">
+
 Proofectly lives in your browser’s context menu. You can simply select any text, right-click, and choose from Proofread, Rewrite, or Summarize.
 
 In seconds, Proofectly shows you an AI-enhanced version of your text. With one click, you can replace the original text instantly.
