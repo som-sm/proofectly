@@ -3,7 +3,6 @@ import {
   BriefcaseBusiness,
   Brush,
   Cable,
-  ChartNoAxesColumn,
   CheckCircle,
   Clapperboard,
   Ellipsis,
@@ -43,9 +42,8 @@ const Icons = {
   TextAlignJustify,
   Tag,
   Zap,
-  ChartNoAxesColumnRotated: ChartNoAxesColumn,
-  BarcodeRotated: Barcode,
-  Tally4Rotated: Tally4,
+  Barcode,
+  Tally4,
   Shredder,
   File,
   Files,
@@ -210,8 +208,8 @@ export const DEFAULT_WRITING_OPTIONS: WritingOption[] = [
         selectedOptionId: "medium",
         options: [
           { id: "short", name: "Short", iconName: "TextAlignJustify" },
-          { id: "medium", name: "Medium", iconName: "Tally4Rotated" },
-          { id: "long", name: "Long", iconName: "BarcodeRotated" }
+          { id: "medium", name: "Medium", iconName: "Tally4" },
+          { id: "long", name: "Long", iconName: "Barcode" }
         ],
         dependsOn: "type",
         dynamicDescriptionMap: {

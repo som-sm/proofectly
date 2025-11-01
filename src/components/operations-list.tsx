@@ -248,7 +248,7 @@ function Config({
                     className="py-2.5 px-4 grid grid-cols-[auto_1fr] items-center gap-x-2 text-foreground"
                   >
                     <Icon
-                      className={`${option.iconName.includes("Rotated") ? "rotate-90" : ""}`}
+                      className={`${["Barcode", "Tally4"].includes(option.iconName) ? "rotate-90" : ""}`}
                       size={16}
                       strokeWidth={1.5}
                     />
@@ -280,7 +280,7 @@ function Config({
               className="shadow-none px-2.5 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground data-[state=on]:border-primary"
             >
               <Icon
-                className={`${option.iconName.includes("Rotated") ? "rotate-90" : ""}`}
+                className={`${["Barcode", "Tally4"].includes(option.iconName) ? "rotate-90" : ""}`}
                 size={16}
                 strokeWidth={1.5}
               />
