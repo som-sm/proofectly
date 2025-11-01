@@ -10,6 +10,15 @@ function createNewMenuItems(writingOptions: WritingOption[]) {
   chrome.contextMenus.removeAll()
 
   writingOptions.forEach(({ id, title, contexts, enabled }) => {
+    if (id === "summarize" && !("Summarizer" in self)) {
+      return
+    }
+    if (id === "proofread" && !("Proofreader" in self)) {
+      return
+    }
+    if (id === "rewrite" && !("Rewriter" in self)) {
+      return
+    }
     if (enabled) {
       chrome.contextMenus.create({ id, title, contexts })
     }
